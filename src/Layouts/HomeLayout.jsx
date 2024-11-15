@@ -5,6 +5,8 @@ import Navbar from "../components/Navbar";
 import CategoryNavbar from "../components/layout-component/CategoryNavbar";
 import RightNavbar from "../components/layout-component/RightNavbar";
 import NewsCard from "../components/layout-component/NewsCard";
+import News from "../components/layout-component/News";
+import { Outlet } from "react-router-dom";
 
 const HomeLayout = () => {
   return (
@@ -22,8 +24,12 @@ const HomeLayout = () => {
         <aside className="col-span-1">
           <CategoryNavbar></CategoryNavbar>
         </aside>
-        <section className="col-span-2"><NewsCard></NewsCard></section>
-        <aside className="col-span-1"><RightNavbar/></aside>
+        <section className="col-span-2">
+          <Outlet />
+        </section>
+        <aside className="col-span-1">
+          <RightNavbar />
+        </aside>
       </main>
     </div>
   );

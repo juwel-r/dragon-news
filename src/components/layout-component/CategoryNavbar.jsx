@@ -5,7 +5,7 @@ const CategoryNavbar = () => {
   const [categories, setCategories] = useState([]);
   useEffect(() => {
     <h1 className="text-xl font-semibold">All Category</h1>;
-    fetch("/category.json")
+    fetch("https://openapi.programming-hero.com/api/news/categories")
       .then((res) => res.json())
       .then((data) => setCategories(data.data.news_category));
   }, []);
