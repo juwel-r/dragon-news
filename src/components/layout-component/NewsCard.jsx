@@ -10,7 +10,7 @@ const NewsCard = (props = {}) => {
     article;
 
   return (
-    <div className="mx-6 mx-auto bg-white rounded-lg shadow-md overflow-hidden border border-gray-200">
+    <div className="max-w-lg bg-white rounded-lg shadow-md overflow-hidden border border-gray-200">
       <div className="p-4">
         {/* Author Info */}
         <div className="flex items-center space-x-4">
@@ -44,7 +44,7 @@ const NewsCard = (props = {}) => {
         </div>
 
         <p className="news-details">{details.substring(0, 140)}...</p>
-        <Link to={_id}> <span className="text-green-500">Read More</span></Link>
+        <Link to={`/news/${_id}`}> <span className="text-green-500">Read More</span></Link>
 
         {/* Footer */}
         <div className="mt-4 flex items-center justify-between border-t pt-3">
